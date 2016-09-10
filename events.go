@@ -6,22 +6,22 @@ type Event byte
 // 2nd byte: Note Number (0-127)
 // 3rd byte: Note Velocity (0-127)
 const (
-	Chan1NoteOff  Event = 0x80
-	Chan2NoteOff  Event = 0x81
-	Chan3NoteOff  Event = 0x82
-	Chan4NoteOff  Event = 0x83
-	Chan5NoteOff  Event = 0x84
-	Chan6NoteOff  Event = 0x85
-	Chan7NoteOff  Event = 0x86
-	Chan8NoteOff  Event = 0x87
-	Chan9NoteOff  Event = 0x88
-	Chan10NoteOff Event = 0x89
-	Chan11NoteOff Event = 0x8A
-	Chan12NoteOff Event = 0x8B
-	Chan13NoteOff Event = 0x8C
-	Chan14NoteOff Event = 0x8D
-	Chan15NoteOff Event = 0x8E
-	Chan16NoteOff Event = 0x8F
+	Chan1NoteOffEvent  Event = 0x80
+	Chan2NoteOffEvent  Event = 0x81
+	Chan3NoteOffEvent  Event = 0x82
+	Chan4NoteOffEvent  Event = 0x83
+	Chan5NoteOffEvent  Event = 0x84
+	Chan6NoteOffEvent  Event = 0x85
+	Chan7NoteOffEvent  Event = 0x86
+	Chan8NoteOffEvent  Event = 0x87
+	Chan9NoteOffEvent  Event = 0x88
+	Chan10NoteOffEvent Event = 0x89
+	Chan11NoteOffEvent Event = 0x8A
+	Chan12NoteOffEvent Event = 0x8B
+	Chan13NoteOffEvent Event = 0x8C
+	Chan14NoteOffEvent Event = 0x8D
+	Chan15NoteOffEvent Event = 0x8E
+	Chan16NoteOffEvent Event = 0x8F
 )
 
 // Note On Events
@@ -178,67 +178,67 @@ const (
 func ChanOf(ev Event) (ch int, ok bool) {
 	ok = true
 	switch ev {
-	case Chan1NoteOff, Chan1NoteOnEvent, Chan1PolyphonicAftertouchEvent,
+	case Chan1NoteOffEvent, Chan1NoteOnEvent, Chan1PolyphonicAftertouchEvent,
 		Chan1ControlModeChangeEvent, Chan1ProgramChangeEvent,
 		Chan1ChannelAftertouchEvent, Chan1PitchWheelRangeEvent:
 		ch = 1
-	case Chan2NoteOff, Chan2NoteOnEvent, Chan2PolyphonicAftertouchEvent,
+	case Chan2NoteOffEvent, Chan2NoteOnEvent, Chan2PolyphonicAftertouchEvent,
 		Chan2ControlModeChangeEvent, Chan2ProgramChangeEvent,
 		Chan2ChannelAftertouchEvent, Chan2PitchWheelRangeEvent:
 		ch = 2
-	case Chan3NoteOff, Chan3NoteOnEvent, Chan3PolyphonicAftertouchEvent,
+	case Chan3NoteOffEvent, Chan3NoteOnEvent, Chan3PolyphonicAftertouchEvent,
 		Chan3ControlModeChangeEvent, Chan3ProgramChangeEvent,
 		Chan3ChannelAftertouchEvent, Chan3PitchWheelRangeEvent:
 		ch = 3
-	case Chan4NoteOff, Chan4NoteOnEvent, Chan4PolyphonicAftertouchEvent,
+	case Chan4NoteOffEvent, Chan4NoteOnEvent, Chan4PolyphonicAftertouchEvent,
 		Chan4ControlModeChangeEvent, Chan4ProgramChangeEvent,
 		Chan4ChannelAftertouchEvent, Chan4PitchWheelRangeEvent:
 		ch = 4
-	case Chan5NoteOff, Chan5NoteOnEvent, Chan5PolyphonicAftertouchEvent,
+	case Chan5NoteOffEvent, Chan5NoteOnEvent, Chan5PolyphonicAftertouchEvent,
 		Chan5ControlModeChangeEvent, Chan5ProgramChangeEvent,
 		Chan5ChannelAftertouchEvent, Chan5PitchWheelRangeEvent:
 		ch = 5
-	case Chan6NoteOff, Chan6NoteOnEvent, Chan6PolyphonicAftertouchEvent,
+	case Chan6NoteOffEvent, Chan6NoteOnEvent, Chan6PolyphonicAftertouchEvent,
 		Chan6ControlModeChangeEvent, Chan6ProgramChangeEvent,
 		Chan6ChannelAftertouchEvent, Chan6PitchWheelRangeEvent:
 		ch = 6
-	case Chan7NoteOff, Chan7NoteOnEvent, Chan7PolyphonicAftertouchEvent,
+	case Chan7NoteOffEvent, Chan7NoteOnEvent, Chan7PolyphonicAftertouchEvent,
 		Chan7ControlModeChangeEvent, Chan7ProgramChangeEvent,
 		Chan7ChannelAftertouchEvent, Chan7PitchWheelRangeEvent:
 		ch = 7
-	case Chan8NoteOff, Chan8NoteOnEvent, Chan8PolyphonicAftertouchEvent,
+	case Chan8NoteOffEvent, Chan8NoteOnEvent, Chan8PolyphonicAftertouchEvent,
 		Chan8ControlModeChangeEvent, Chan8ProgramChangeEvent,
 		Chan8ChannelAftertouchEvent, Chan8PitchWheelRangeEvent:
 		ch = 8
-	case Chan9NoteOff, Chan9NoteOnEvent, Chan9PolyphonicAftertouchEvent,
+	case Chan9NoteOffEvent, Chan9NoteOnEvent, Chan9PolyphonicAftertouchEvent,
 		Chan9ControlModeChangeEvent, Chan9ProgramChangeEvent,
 		Chan9ChannelAftertouchEvent, Chan9PitchWheelRangeEvent:
 		ch = 9
-	case Chan10NoteOff, Chan10NoteOnEvent, Chan10PolyphonicAftertouchEvent,
+	case Chan10NoteOffEvent, Chan10NoteOnEvent, Chan10PolyphonicAftertouchEvent,
 		Chan10ControlModeChangeEvent, Chan10ProgramChangeEvent,
 		Chan10ChannelAftertouchEvent, Chan10PitchWheelRangeEvent:
 		ch = 10
-	case Chan11NoteOff, Chan11NoteOnEvent, Chan11PolyphonicAftertouchEvent,
+	case Chan11NoteOffEvent, Chan11NoteOnEvent, Chan11PolyphonicAftertouchEvent,
 		Chan11ControlModeChangeEvent, Chan11ProgramChangeEvent,
 		Chan11ChannelAftertouchEvent, Chan11PitchWheelRangeEvent:
 		ch = 11
-	case Chan12NoteOff, Chan12NoteOnEvent, Chan12PolyphonicAftertouchEvent,
+	case Chan12NoteOffEvent, Chan12NoteOnEvent, Chan12PolyphonicAftertouchEvent,
 		Chan12ControlModeChangeEvent, Chan12ProgramChangeEvent,
 		Chan12ChannelAftertouchEvent, Chan12PitchWheelRangeEvent:
 		ch = 12
-	case Chan13NoteOff, Chan13NoteOnEvent, Chan13PolyphonicAftertouchEvent,
+	case Chan13NoteOffEvent, Chan13NoteOnEvent, Chan13PolyphonicAftertouchEvent,
 		Chan13ControlModeChangeEvent, Chan13ProgramChangeEvent,
 		Chan13ChannelAftertouchEvent, Chan13PitchWheelRangeEvent:
 		ch = 13
-	case Chan14NoteOff, Chan14NoteOnEvent, Chan14PolyphonicAftertouchEvent,
+	case Chan14NoteOffEvent, Chan14NoteOnEvent, Chan14PolyphonicAftertouchEvent,
 		Chan14ControlModeChangeEvent, Chan14ProgramChangeEvent,
 		Chan14ChannelAftertouchEvent, Chan14PitchWheelRangeEvent:
 		ch = 14
-	case Chan15NoteOff, Chan15NoteOnEvent, Chan15PolyphonicAftertouchEvent,
+	case Chan15NoteOffEvent, Chan15NoteOnEvent, Chan15PolyphonicAftertouchEvent,
 		Chan15ControlModeChangeEvent, Chan15ProgramChangeEvent,
 		Chan15ChannelAftertouchEvent, Chan15PitchWheelRangeEvent:
 		ch = 15
-	case Chan16NoteOff, Chan16NoteOnEvent, Chan16PolyphonicAftertouchEvent,
+	case Chan16NoteOffEvent, Chan16NoteOnEvent, Chan16PolyphonicAftertouchEvent,
 		Chan16ControlModeChangeEvent, Chan16ProgramChangeEvent,
 		Chan16ChannelAftertouchEvent, Chan16PitchWheelRangeEvent:
 		ch = 16
@@ -249,7 +249,7 @@ func ChanOf(ev Event) (ch int, ok bool) {
 }
 
 func IsNoteOn(ev Event) bool {
-	switch {
+	switch ev {
 	case Chan1NoteOnEvent,
 		Chan2NoteOnEvent,
 		Chan3NoteOnEvent,
@@ -272,7 +272,7 @@ func IsNoteOn(ev Event) bool {
 }
 
 func IsNoteOff(ev Event) bool {
-	switch {
+	switch ev {
 	case Chan1NoteOffEvent,
 		Chan2NoteOffEvent,
 		Chan3NoteOffEvent,
