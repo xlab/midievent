@@ -247,3 +247,49 @@ func ChanOf(ev Event) (ch int, ok bool) {
 	}
 	return
 }
+
+func IsNoteOn(ev Event) bool {
+	switch {
+	case Chan1NoteOnEvent,
+		Chan2NoteOnEvent,
+		Chan3NoteOnEvent,
+		Chan4NoteOnEvent,
+		Chan5NoteOnEvent,
+		Chan6NoteOnEvent,
+		Chan7NoteOnEvent,
+		Chan8NoteOnEvent,
+		Chan9NoteOnEvent,
+		Chan10NoteOnEvent,
+		Chan11NoteOnEvent,
+		Chan12NoteOnEvent,
+		Chan13NoteOnEvent,
+		Chan14NoteOnEvent,
+		Chan15NoteOnEvent,
+		Chan16NoteOnEvent:
+		return true
+	}
+	return false
+}
+
+func IsNoteOff(ev Event) bool {
+	switch {
+	case Chan1NoteOffEvent,
+		Chan2NoteOffEvent,
+		Chan3NoteOffEvent,
+		Chan4NoteOffEvent,
+		Chan5NoteOffEvent,
+		Chan6NoteOffEvent,
+		Chan7NoteOffEvent,
+		Chan8NoteOffEvent,
+		Chan9NoteOffEvent,
+		Chan10NoteOffEvent,
+		Chan11NoteOffEvent,
+		Chan12NoteOffEvent,
+		Chan13NoteOffEvent,
+		Chan14NoteOffEvent,
+		Chan15NoteOffEvent,
+		Chan16NoteOffEvent:
+		return true
+	}
+	return false
+}
