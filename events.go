@@ -1,3 +1,4 @@
+// Package midievent provides MIDI event type mappings for Go-lang.
 package midievent
 
 type Event byte
