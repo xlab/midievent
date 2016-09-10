@@ -1,4 +1,4 @@
-midievent
+midievent [![GoDoc](https://godoc.org/github.com/xlab/midievent?status.svg)](https://godoc.org/github.com/xlab/midievent)
 =========
 
 Package `midievent` provides MIDI event type mappings for Go-lang.
