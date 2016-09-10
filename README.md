@@ -24,8 +24,6 @@ for ev := range midiIn.Source() {
 }
 ```
 
-Example: [vocoder](https://github.com/xlab/portmidi/tree/master/example/vocoder).
-
 ## License
 
 CC0 (public domain).
